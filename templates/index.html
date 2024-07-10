@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Classificação de notas</title>
+</head>
+<body>
+    <h1>Classificação de notas</h1>
+    <form method="post">
+        <label for="text">Insira a descrição do participante:</label><br>
+        <textarea id="text" name="text" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Classify">
+    </form>
+    {% if result %}
+    <h2>Results</h2>
+    <p><strong>Original Description:</strong> {{ result.description }}</p>
+    <p><strong>Translated Description:</strong> {{ result.translated_description }}</p>
+    <p><strong>Classification Label:</strong> {{ result.label }}</p>
+    <p><strong>Classification Score:</strong> {{ result.score }}</p>
+    <p><strong>Final Score:</strong> {{ result.final_score }}</p>
+    {% endif %}
+</body>
+</html>
