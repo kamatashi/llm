@@ -35,3 +35,9 @@ Esse readme é um guia para executar os códigos do pipeline usando um ambiente 
     ``` python
     python3 zero-shot.py
     ```
+
+4. **Rodar a interface Web**
+
+```python
+python3 app.py
+```
