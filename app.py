@@ -34,6 +34,9 @@ def index():
         # Get the input text from the form
         text = request.form['text']
 
+        if not text.strip():
+            return render_template('index.html', result=None, error="Por favor insira uma descrição válida.")
+
         # Translate the text to English
         translated_text = GoogleTranslator(source='auto', target='en').translate(text)
 
