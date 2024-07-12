@@ -32,12 +32,11 @@
                 </div>
                 <div class="modal-body">
                     {% if result %}
-                        <h2>Results</h2>
-                        <p><strong>Original Description:</strong> {{ result.description }}</p>
-                        <p><strong>Translated Description:</strong> {{ result.translated_description }}</p>
-                        <p><strong>Classification Label:</strong> {{ result.label }}</p>
-                        <p><strong>Classification Score:</strong> {{ result.score }}</p>
-                        <p><strong>Final Score:</strong> {{ result.final_score }}</p>
+                        <h2>Resultado</h2>
+                        <br>
+                        <p><strong>Resultado:</strong> {{ result.label }}</p>
+                        <p><strong>Nota:</strong> {{ result.score }}</p>
+                        <p><strong>Nota Final:</strong> {{ result.final_score }}</p>
                     {% else %}
                         <p>Aguarde, processando...</p>
                     {% endif %}

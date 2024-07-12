@@ -49,6 +49,15 @@ def index():
         final_score = custom_score(label, score)
 
         # Prepare the result for rendering
+        if label == "excellent performance":
+            label = "Performance excelente"
+        elif label == "good performance":
+            label = "Performance boa"
+        elif label == "average performance":
+            label = "Performance média"
+        else:
+            label = "Performance ruim"
+
         result = {
             'description': text,
             'translated_description': translated_text,
